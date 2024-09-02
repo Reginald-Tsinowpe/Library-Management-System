@@ -1,19 +1,14 @@
-bookName,bookID,bookAuthor,CardID,issued_status,cardID
-Book Name,Book ID,Author(s),Issuer's Card ID,Issued,
-Typed First,38738767,adaad,,Returned,45345370
-Da Vinci's Code,4564654,Dan Brown,,Issued,456465
-Black Sheep,44,Its Mother,,Issued,00999213
-HoHoHo,25,Santa Claus,,Returned,909090
-Merry Christmas,2145923,Mrs. Claus,,Issued,848202237
-Black Clover,89086,Black Bulls,,Returned,457894
-New Force,4564864,Cheddar,,Issued,546894652
-as,AS,as,,Issued,AS
-,,,,Issued,
-jtjstuhtr,34345354,ykrsjmyjr,,Returned,254386+
-jtjstuhtr,34345354,ykrsjmyjr,,Issued,254386+
-jtjstuhtr,34345354,ykrsjmyjr,,Issued,254386+
-jtjstuhtr,34345354,ykrsjmyjr,,Returned,254386+
-qdqwed,asdsad,sadas,,Issued,asdasd
-,,,,Returned,
-hello,245212,ada,,Issued,678532
-hello,245212,ada,,Issued,678532
+bookName,bookID,bookAuthor,CardID,issued_status
+Test book,Test Book ID,Test Author,Test Card ID,Returned
+Book 1,0000001,Author 1,192168001,Issued
+Book 2,0000002,Author 2,192168002,Issued
+Book 3,0000003,Author 3,192168003,Issued
+Book 4,0000004,Author 4,192168004,Issued
+Book 5,0000005,Author 5,192168005,Issued
+Book 6,0000006,Author 6,192168006,Issued
+Book 7,0000007,Author 7,192168007,Issued
+Book 8,0000008,Author 8,192168008,Issued
+Book 9,0000009,Author 9,192168009,Issued
+Book 10,0000010,Author 10,192168010,Issued
+Book 11,0000011,Author 11,192168011,Issued
+Book 12,0000012,Author 12,192168012,Issued

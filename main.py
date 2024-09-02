@@ -84,19 +84,27 @@ def search(): #pretty delf explanatory
     for record in table.get_children():
         table.delete(record)
     fetch = searched.get()
-    csv_open = open(csv_loc)
+    int(fetch)
+    '''
+        csv_open = open(csv_loc)
     csv_read = csv.reader(csv_open)
     csv_list = list(csv_read)
+    '''
     pd_csv = pd.read_csv(csv_loc)
-    for row in csv_list:
-        if row[3] == fetch:
-            table.insert(parent='', index=0, values=(row[0], row[1], row[2], row[3], row[4]))
-        else:
-            #Emergency pop-up message: "No Result"
-            messagebox.showinfo("Search Results", "No result")
-            break
 
-    csv_open.close()
+    eol_count = 0   #end of loop count
+
+    for row in range(0, rowNum):
+        print(f"row={row}, rowNum={rowNum}")
+        if pd_csv.loc[row, 'cardID'] == fetch:
+            table.insert(parent='', index=END, values=(pd_csv.loc[row, 'bookName'], pd_csv.loc[row, 'bookAuthor'], pd_csv.loc[row, 'bookID'], pd_csv.loc[row, 'cardID'], pd_csv.loc[row, 'issued_status']))
+            eol_count += 1
+        if (row == rowNum-1)&(eol_count == 0):
+            messagebox.showinfo("Search Results", "No result")
+    print(eol_count)
+
+
+
 
 # DELETE SELECTED RECORDS
 def delete_records():#deleted selected records

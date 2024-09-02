@@ -85,23 +85,18 @@ def search(): #pretty delf explanatory
         table.delete(record)
     fetch = searched.get()
     int(fetch)
-    '''
-        csv_open = open(csv_loc)
-    csv_read = csv.reader(csv_open)
-    csv_list = list(csv_read)
-    '''
+
     pd_csv = pd.read_csv(csv_loc)
 
     eol_count = 0   #end of loop count
 
     for row in range(0, rowNum):
-        print(f"row={row}, rowNum={rowNum}")
-        if pd_csv.loc[row, 'cardID'] == fetch:
-            table.insert(parent='', index=END, values=(pd_csv.loc[row, 'bookName'], pd_csv.loc[row, 'bookAuthor'], pd_csv.loc[row, 'bookID'], pd_csv.loc[row, 'cardID'], pd_csv.loc[row, 'issued_status']))
+        if pd_csv.loc[row, 'CardID'] == fetch:
+            table.insert(parent='', index=END, values=(pd_csv.loc[row, 'bookName'], pd_csv.loc[row, 'bookAuthor'], pd_csv.loc[row, 'bookID'], pd_csv.loc[row, 'CardID'], pd_csv.loc[row, 'issued_status']))
             eol_count += 1
         if (row == rowNum-1)&(eol_count == 0):
             messagebox.showinfo("Search Results", "No result")
-    print(eol_count)
+
 
 
 
@@ -197,7 +192,7 @@ Accept_input = Button(new_record_frame, text="Add new record", bg="#3366FF", com
 Clear_Fields = Button(new_record_frame, text="Clear Fields", bg="#3366FF", command=Delete_Entry).pack(ipadx=20, pady=10)
 
 #       VIEW RECORDS FRAME WIDGET
-Label(view_record_frame, text="Search", fg='white', bg='black').pack(pady=(30, 0))
+Label(view_record_frame, text="Search by Card ID", fg='white', bg='black').pack(pady=(30, 0))
 global searched
 searched = Entry(view_record_frame)
 searched.pack()
@@ -252,7 +247,7 @@ def show_all():
     rowNum = csv_open.shape[0]
 
     for i in range(0, rowNum):
-        table.insert(parent='', index=END, values=(csv_open.loc[i, 'bookName'], csv_open.loc[i, 'bookAuthor'], csv_open.loc[i, 'bookID'], csv_open.loc[i, 'cardID'], csv_open.loc[i, 'issued_status']))
+        table.insert(parent='', index=END, values=(csv_open.loc[i, 'bookName'], csv_open.loc[i, 'bookAuthor'], csv_open.loc[i, 'bookID'], csv_open.loc[i, 'CardID'], csv_open.loc[i, 'issued_status']))
 
 show_all()
 
